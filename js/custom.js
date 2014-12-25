@@ -36,5 +36,5 @@ function createPixels() {
 
 function pixelTrail() {
     $("#wrapper").on("mouseenter",".pixel", function() {
-        $(this).css("background-color", "white")});
+        $(this).addClass("pixel-traveled")});
 }
