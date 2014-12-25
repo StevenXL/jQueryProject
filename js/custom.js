@@ -5,6 +5,7 @@ $(document).ready(function() {
     $(".square").each(createPixels);
     changeOnMouseEnter();
     changeOnMouseLeave();
+    pixelTrail();
 });
 
 function createGrid() {
@@ -28,7 +29,12 @@ function changeOnMouseLeave() {
 }
 
 function createPixels() {
-    for (ii = 0; ii < 10000; ii++) {
+    for (ii = 0; ii < 100; ii++) {
         $(this).append('<div class="pixel"></div>');
     };
+}
+
+function pixelTrail() {
+    $("#wrapper").on("mouseenter",".pixel", function() {
+        $(this).css("background-color", "white")});
 }
