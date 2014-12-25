@@ -2,6 +2,7 @@
 
 $(document).ready(function() {
     createGrid();
+    $(".square").each(createPixels);
     changeOnMouseEnter();
     changeOnMouseLeave();
 });
@@ -24,4 +25,10 @@ function changeOnMouseEnter() {
 function changeOnMouseLeave() {
     $(".square").on("mouseleave", function() {
         $(this).removeClass("traveled")});
+}
+
+function createPixels() {
+    for (ii = 0; ii < 10000; ii++) {
+        $(this).append('<div class="pixel"></div>');
+    };
 }

@@ -1,10 +1,15 @@
 /* Custom CSS */
 
+#wrapper {
+    margin: 10px auto;
+    width: 408px;
+}
+
 .square {
     background-color: black;
     display: inline-block;
-    width: 300px;
-    height: 300px;
+    width: 100px;
+    height: 100px;
     border: 1px solid white
 }
 
