@@ -2,14 +2,14 @@
 
 #wrapper {
     margin: 10px auto;
-    width: 408px;
+    width: 960px;
 }
 
 .square {
     background-color: black;
     display: inline-block;
-    width: 100px;
-    height: 100px;
+    width: 58px;
+    height: 58px;
     border: 1px solid white
 }
 
@@ -26,4 +26,8 @@
 
 .pixel-traveled {
     background-color: white;
+}
+
+form {
+    margin: 20px auto;
 }

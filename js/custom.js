@@ -1,18 +1,19 @@
 /* Custom jQuery */
 
 $(document).ready(function() {
-    createGrid();
+    var numberSquares = 16 * 16;
+    createGrid(numberSquares);
     $(".square").each(createPixels);
     changeOnMouseEnter();
     changeOnMouseLeave();
     pixelTrail();
 });
 
-function createGrid() {
+function createGrid(numberSquares) {
     var squareClass = "square";
     var squareID = 1;
 
-    for (ii = 0; ii < 16; ii++) {
+    for (ii = 0; ii < numberSquares; ii++) {
         $("#wrapper").append('<div class="' + squareClass + '" id="square-' + squareID + '"></div>');
         squareID += 1;
     }
@@ -38,3 +39,12 @@ function pixelTrail() {
     $("#wrapper").on("mouseenter",".pixel", function() {
         $(this).addClass("pixel-traveled")});
 }
+
+/*
+function grabUserInput() {
+    $("form").submit(function(e) {
+        e.preventDefault();
+        return $("form").find(".grid_size").val();
+        });
+}
+*/
