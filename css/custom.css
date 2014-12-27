@@ -8,8 +8,6 @@
 .square {
     background-color: black;
     display: inline-block;
-    width: 58px;
-    height: 58px;
     border: 1px solid white
 }
 
