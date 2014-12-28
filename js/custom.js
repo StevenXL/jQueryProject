@@ -33,7 +33,7 @@ function changeOnMouseLeave() {
 }
 
 function createPixels() {
-    for (ii = 0; ii < 100; ii++) {
+    for (ii = 0; ii < 100 ; ii++) {
         $(this).append('<div class="pixel"></div>');
     };
 }
@@ -54,5 +54,10 @@ function buttonPressed () {
         // call create grid function with new dimensions
         createGrid(numberSquares, squareDimension);
         // call create pixels function again
+        $(".square").each(createPixels);
+        pixelTrail();
+        changeOnMouseEnter();
+        changeOnMouseLeave();
+        buttonPressed();
         });
 }
