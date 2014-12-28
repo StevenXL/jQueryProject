@@ -33,7 +33,7 @@ function changeOnMouseLeave() {
 }
 
 function createPixels() {
-    for (ii = 0; ii < 100 ; ii++) {
+    for (ii = 0; ii < 361; ii++) {
         $(this).append('<div class="pixel"></div>');
     };
 }
@@ -47,6 +47,18 @@ function buttonPressed () {
     $("form").submit(function(e) {
         e.preventDefault();
         var userInput = ( $("form").find(".grid_size").val() );
+
+        if (userInput > 20) {
+            userInput = 20;
+            alert("Sorry. Maximum allowed is 20.");
+            $(".grid_size").val("20");
+        }
+        if (userInput < 5) {
+            userInput = 5;
+            alert("Sorry. Minimum allowed is 5.");
+            $(".grid_size").val("5");
+        }
+
         numberSquares = userInput * userInput;
         squareDimension = (960 / userInput) - 2;
         // remove current divs
